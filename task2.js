@@ -1,9 +1,5 @@
-const input = [
-    { name: "Milk", price: 20, amount: 15 },
-    { name: "Coffee", price: 30, amount: 17 },
-    { name: "Tea", price: 10, amount: 14 },
-  ];
-  
-const oddIndex = arr => arr.map(i => ({ name: i.name, total: i.amount * i.price }));
+const input = [14, 53, 23, 53, 13, 55, 7, 34, 3, 6];
 
-console.log(output);
+const oddIndex = arr => arr.filter((_, index) => index % 2 == 0)
+
+console.log(oddIndex(input));
