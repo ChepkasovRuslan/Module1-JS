@@ -1,17 +1,16 @@
-let numbers = [1, 2, 3, 4, 5, 6];
+const numbers = [1, 2, 3, 4];
 
 const isOdd = number => number % 2 == 0;
 
 const multiplyByTwo = number => number * 2;
 
-const filterAndOperate = (predicate, operation) => {
-    numbers = Array.from(numbers).filter(predicate);
-    console.log(numbers);
+const filterAndOperate = (arr, predicate, operation) => {
+    let result = Array.from(arr).filter(predicate);
     
-    numbers = numbers.map(operation);
+    result = result.map(operation);
     
-    console.log(numbers);
+    console.log(result.join('\n'));
 }
 
 
-filterAndOperate(isOdd, multiplyByTwo);
+filterAndOperate(numbers, isOdd, multiplyByTwo);
