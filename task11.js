@@ -1,11 +1,13 @@
-let table = new Array(10);
-for(let i = 0; i < table.length; i++)
-    table[i] = new Array(10);
+const size = 10;
 
-for(let row = 0; row < table.length; row++) {
-    for(col = 0; col < table[row].length; col++) {
-        table[row][col] = row * col;
-    }
+let table = [];
+for(let i = 0; i < size; i++)
+  table[i] = [];
+
+for(let row = 0; row < size; row++) {
+  for(col = 0; col < size; col++) {
+    table[row][col] = row * col;
+  }
 }
 
 console.table(table);
