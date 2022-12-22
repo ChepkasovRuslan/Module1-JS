@@ -1,7 +1,37 @@
-const calculate = (a, b, operation) => operation(a, b);
+function calculate (a, b, operation) {
+    let result = '';
+    switch(operation) {
+        case '+': {
+            result = a + b;
+            break;
+        }
+        case '-': {
+            result = a - b;
+            break;
+        }
+        case '*': {
+            result = a * b;
+            break;
+        }
+        case '/': {
+            result = a / b;
+            break;
+        }
+        case '%': {
+            result = a % b;
+            break;
+        }
+        default: {
+            console.log('unknow operation');
+        }
+    }
 
-const sum = (a, b) => a + b;
-const subtract = (a, b) => a - b;
+    return result;
+}
 
-console.log(calculate(10, 10, sum));
-console.log(calculate(10, 10, subtract));
+console.log(calculate(10, 10, '+'));
+console.log(calculate(10, 10, '-'));
+console.log(calculate(10, 10, '*'));
+console.log(calculate(10, 10, '/'));
+console.log(calculate(10, 10, '%'));
+console.log(calculate(10, 10, 'a'));
