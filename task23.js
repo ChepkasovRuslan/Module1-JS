@@ -1,4 +1,4 @@
-let result = {};
+const result = {};
 
 const strings = ['aaa', 'bbb', 'ccc', 'aaa', 'bbb', '', 'aaa'];
 
