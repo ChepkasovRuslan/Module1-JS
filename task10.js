@@ -1,7 +1,7 @@
 const payments = [
-  { from: 'Ivan', to: 'Oleg', amount: 2500 }, 
-  { from: 'Ivan', to: 'Igor', amount: 2000 }, 
-  { from: 'Oleg', to: 'Igor', amount: 1500 }
+  {from: 'Ivan', to: 'Oleg', amount: 2500}, 
+  {from: 'Ivan', to: 'Igor', amount: 2000}, 
+  {from: 'Oleg', to: 'Igor', amount: 1500}
 ];
 
 const average =
