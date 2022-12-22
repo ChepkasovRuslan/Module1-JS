@@ -3,7 +3,7 @@ const arr2 = ['b1', 'b2', 'b3'];
 const arr3 = ['c1', 'c2', 'c3'];
 
 function concatenate(...arrays) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < arrays.length; i++) {
         result.push(...arrays[i])
     }
