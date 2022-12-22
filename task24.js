@@ -6,9 +6,9 @@ const nums = [4, 5, 2, 4, 1, 5, 3];
 
 const sort = (arr, param) => {
     switch (param) {
-        case PARAM1: return Array.from(arr).sort()
-        case PARAM2: return Array.from(arr).sort().reverse()
-        case PARAM3: return Array.from(arr)
+        case PARAM1: return arr.sort();
+        case PARAM2: return arr.sort().reverse();
+        case PARAM3: return arr;
     }
 }
 
