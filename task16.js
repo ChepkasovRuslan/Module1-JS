@@ -1,12 +1,11 @@
 const number = '88005553535';
 
 const formatPhoneNumber = str => {
-    let result = str;
-    result = result.substring(1, 2) + ' (' + result.substring(1, 4) + ') ' +
-        result.substring(4, 7) + '-' + result.substring(7, 9) + '-' +
-        result.substring(9, 11);
+    str = str.substring(1, 2) + ' (' + str.substring(1, 4) + ') ' +
+        str.substring(4, 7) + '-' + str.substring(7, 9) + '-' +
+        str.substring(9, 11);
     
-    return result;
+    return str;
 };
 
 console.log(formatPhoneNumber(number));
