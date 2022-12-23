@@ -1,16 +1,21 @@
-const url = new URL('https://www.google.com/doodles/rubiks-cube');
+const generateUrlObject = url => {
+    const URI = new URL(url);
+    const preparedObject = {
+        protocol: URI.protocol,
+        hostname: URI.hostname,
+    }
 
-const urlPath = url.pathname.substring(1).split('/');
+    let child = preparedObject;
+    const arrayWithPath = URI.pathname.substring(1).split("/");
 
-console.log(urlPath);
+    arrayWithPath.forEach((element, _) => {
+        child.child = {
+            path: element,
+        }
+        child = child.child;
+    })
 
-const urlObject = {
-    protocol: url.protocol,
-    hostname: url.hostname,
+    console.log(preparedObject);
 }
 
-for (let i = 0; i < urlPath.length; i++) {
-    urlObject.child = ({path: urlPath[i]});
-}
-
-console.log(urlObject);
+generateUrlObject("https://www.google.com/doodles/rubiks-cube/a/a/a");
