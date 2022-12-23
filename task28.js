@@ -13,11 +13,11 @@ const changed = {
 
 const updateUser = (user, changedUser) => {
     return {
-        newUser: {
+        user: {
             ...user,
             ...changedUser
         }
-    }
+    };
 }
 
-console.log(updateUser(user, changed));
+console.log(user);
