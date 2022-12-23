@@ -5,6 +5,6 @@ const input = [
     {a: 2, b: 2, c: 3}
 ];
 
-const output = input.map(i => i.a + i.b + i.c);
+const output = input.map(i => ({ p: i.a + i.b + i.c }));
 
 console.log(output);
