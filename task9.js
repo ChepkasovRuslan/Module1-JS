@@ -4,12 +4,21 @@ const persons = [
     { name: 'Igor', age: 24}
 ];
 
-const highestAge = persons.reduce((previous, current) => {
-    return current.age > previous.age ? current : previous;
-}).age;
+const findMinMax = persons => {
+    let max = 0;
+    let min = Number.MAX_VALUE;
+    for (let i = 0; i < persons.length; i++) {
+        if(persons[i].age > max) {
+            max = persons[i].age;
+        }
+        if(persons[i].age < min) {
+            min = persons[i].age;
+        }
+    }
 
-const lowestAge = persons.reduce((previous, current) => {
-    return current.age < previous.age ? current : previous;
-}).age;
+    return {max: max, min: min};
+}
 
-console.log({ min: lowestAge, max: highestAge });
+const result = findMinMax(persons);
+
+console.log(result);
