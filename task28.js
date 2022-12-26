@@ -12,12 +12,10 @@ const changed = {
 };
 
 const updateUser = (user, changedUser) => {
-    return {
-        user: {
-            ...user,
-            ...changedUser
-        }
-    };
+  return {
+    ...user,
+    ...changedUser
+  };
 }
 
 console.log(user);
